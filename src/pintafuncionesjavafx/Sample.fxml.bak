@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="fondoBottonAnchorPanel" xmlns:fx="http://javafx.com/fxml" fx:controller="pintafuncionesjavafx.SampleController">
+  <children>
+    <Button fx:id="button" layoutX="594.0" layoutY="14.0" onAction="#AccionPintar" prefHeight="55.0" prefWidth="278.0" styleClass="boton" text="Dibujar Función !!" />
+    <LineChart fx:id="graph" layoutX="14.0" layoutY="89.0" prefHeight="597.0" prefWidth="872.0">
+      <xAxis>
+        <NumberAxis fx:id="x" label="x" tickUnit="1.0" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis label="f(x)" side="LEFT" tickUnit="1.0" />
+      </yAxis>
+    </LineChart>
+    <Label layoutX="17.0" layoutY="14.0" text="Rango de la función:">
+      <font>
+        <Font name="Comic Sans MS Bold" size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField fx:id="rangoMin" layoutX="223.0" layoutY="20.0" prefWidth="73.0" />
+    <TextField fx:id="rangoMax" layoutX="312.0" layoutY="20.0" prefWidth="73.0" />
+    <Label font="$x1" layoutX="403.0" layoutY="17.0" text="Función:" />
+    <ChoiceBox fx:id="choiceFun" layoutX="493.0" layoutY="21.0" prefWidth="73.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="x" />
+          <String fx:value="x^2" />
+          <String fx:value="x^3" />
+          <String fx:value="x^4" />
+          <String fx:value="x^5" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label font="$x1" layoutX="20.0" layoutY="52.0" text="Pintar Puntos:" />
+    <RadioButton fx:id="radioButtonNO" layoutX="163.0" layoutY="60.0" mnemonicParsing="false" text="NO" />
+  </children>
+  <stylesheets>
+    <URL value="@estilosCSS.css" />
+  </stylesheets>
+</AnchorPane>
